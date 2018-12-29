@@ -44,7 +44,7 @@ const AvatarContainer = styled.div`
 `;
 
 const Avatar = styled.img`
-  ${tw('block w-3/5 md:w-1/2 ml-auto mr-auto lg:w-1/2 xl:w-3/5 lg:mr-8 h-auto md:mt-8')};
+  ${tw('block w-1/2 md:w-3/5 ml-auto mr-auto lg:w-3/5 xl:w-1/2 lg:mr-8 h-auto md:mt-8')};
 `;
 
 const IconContainer = styled.div`
@@ -52,7 +52,7 @@ const IconContainer = styled.div`
 `;
 
 const IconWrapper = styled.a`
-  ${tw('pr-4 text-center')};
+  ${tw('pl-2 pr-2 lg:pl-0 lg:pr-4 text-center')};
 `;
 
 const JobDesc = styled.p`
