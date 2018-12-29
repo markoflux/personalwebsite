@@ -10,10 +10,10 @@ module.exports = {
   siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
   siteDescription: 'Marko Bradic Homepage',
 
-  // siteFBAppID: '123456789', // Facebook App ID - Optional
-  // userTwitter: '@cara', // Twitter Username
-  // ogSiteName: 'cara', // Facebook Site Name
-  // ogLanguage: 'en_US', // Facebook Language
+  siteFBAppID: '', // Facebook App ID - Optional
+  userTwitter: '@markoflux', // Twitter Username
+  ogSiteName: 'markobradic', // Facebook Site Name
+  ogLanguage: 'en_US', // Facebook Language
 
   // Manifest and Progress color
   themeColor: tailwind.colors.orange,
