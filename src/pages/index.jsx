@@ -40,11 +40,11 @@ const Subtitle = styled.p`
 `;
 
 const AvatarContainer = styled.div`
-  ${tw('w-full lg:w-3/4')};
+  ${tw('w-full lg:w-1/2')};
 `;
 
 const Avatar = styled.img`
-  ${tw('block w-3/4 md:w-1/2 ml-auto mr-auto lg:w-full xl:w-full lg:mr-8 h-auto md:mt-8')};
+  ${tw('block w-3/5 md:w-1/2 ml-auto mr-auto lg:w-1/2 xl:w-3/5 lg:mr-8 h-auto md:mt-8')};
 `;
 
 const IconContainer = styled.div`
@@ -55,84 +55,54 @@ const IconWrapper = styled.a`
   ${tw('pr-4 text-center')};
 `;
 
-const AvatarParallaxData = [
-  {
-    start: 0,
-    end: 300,
-    properties: [
-      {
-        startValue: 580,
-        endValue: 100,
-        property: 'translateX',
-      },
-      {
-        startValue: 0,
-        endValue: 300,
-        property: 'translateY',
-      },
-    ],
-  },
-  {
-    start: 300,
-    end: 3000,
-    properties: [
-      {
-        startValue: 300,
-        endValue: 3000,
-        property: 'translateY',
-      },
-    ],
-  },
-];
+const JobDesc = styled.p`
+  ${tw('text-xs md:text-m lg:text-m xl:text-lg')};
+`;
 
-const HeroParallaxData = [
-  {
-    start: 0,
-    end: 0,
-    properties: [
-      {
-        startValue: 0,
-        endValue: 1,
-        property: 'opacity',
-      },
-      {
-        startValue: 400,
-        endValue: 400,
-        property: 'translateX',
-      },
-    ],
-  },
-];
+const JobLink = styled.a`
+  ${tw('text-blue hover:text-blue-light')};
+`;
 
 const Index = () => (
   <React.Fragment>
     <SEO />
+    <div id="stars" />
+    <div id="stars2" />
+    <div id="stars3" />
     <Container>
       <Content>
-        <Plx parallaxData={AvatarParallaxData}>
-          <AvatarContainer>
-            <Avatar src={avatar} alt="Marko Bradic" />
-          </AvatarContainer>
-        </Plx>
-        <Plx parallaxData={HeroParallaxData}>
-          <Hero>
-            <BigTitle>
-              Hey, nice to meet you! <br /> I'm <b>Marko Bradic</b>.
-            </BigTitle>
-            <Subtitle>
-              Powered by creative ideas and driven by the technologies of tomorrow I design and develop products &
-              services that enrich people’s lives.
-            </Subtitle>
-            <IconContainer>
-              <IconWrapper href="https://www.linkedin.com/in/markobradic/" target="_blank">
-                <FontAwesomeIcon icon={['fab', 'linkedin']} color="white" size="2x" />
-              </IconWrapper>
-              <IconWrapper href="https://www.xing.com/profile/Marko_Bradic/" target="_blank">
-                <FontAwesomeIcon icon={['fab', 'xing-square']} color="white" size="2x" />
-              </IconWrapper>
-            </IconContainer>
-          </Hero>
-        </Plx>
+        <AvatarContainer>
+          <Avatar src={avatar} alt="Marko Bradic" />
+        </AvatarContainer>
+        <Hero>
+          <BigTitle>
+            👋🏻 Hey, nice to meet you!
+            <br />
+            <br />
+            <span>
+              I'm <b>Marko Bradic</b>
+            </span>
+            <br />
+            <JobDesc>
+              Product Manager
+              <JobLink href="https://deloittedigital.de" target="_blank">
+                @DeloitteDigital
+              </JobLink>
+            </JobDesc>
+          </BigTitle>
+          <Subtitle>
+            Powered by creative ideas and driven by the technologies of tomorrow I design and develop products &
+            services that enrich people’s lives
+          </Subtitle>
+          <IconContainer>
+            <IconWrapper href="https://www.linkedin.com/in/markobradic/" target="_blank">
+              <FontAwesomeIcon icon={['fab', 'linkedin']} color="white" className="hover-blue" size="2x" />
+            </IconWrapper>
+            <IconWrapper href="https://www.xing.com/profile/Marko_Bradic/" target="_blank">
+              <FontAwesomeIcon icon={['fab', 'xing-square']} color="white" className="hover-blue" size="2x" />
+            </IconWrapper>
+          </IconContainer>
+        </Hero>
       </Content>
     </Container>
   </React.Fragment>
