@@ -1,6 +1,7 @@
 /* global tw */
 import React from 'react';
 import styled from 'react-emotion';
+import Delay from 'react-delay';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +12,7 @@ import SEO from '../components/SEO';
 // import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
 // import { hidden } from '../styles/utils';
 // import { colors } from '../../tailwind';
-import avatar from '../images/avatar.png';
+import avatar from '../images/avatar.webp';
 import '../styles/global';
 
 library.add(fas, far, fab);
@@ -36,7 +37,6 @@ const BigTitle = styled.h1`
 
 const Subtitle = styled.p`
   ${tw('font-sans text-white text-xs md:text-lg lg:text-lg xl:text-2xl md:my-4 lg:mt-8 text-center lg:text-left')};
-  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 `;
 
 const AvatarContainer = styled.div`
@@ -44,7 +44,7 @@ const AvatarContainer = styled.div`
 `;
 
 const Avatar = styled.img`
-  ${tw('block w-1/2 md:w-3/5 ml-auto mr-auto lg:w-3/5 xl:w-1/2 lg:mr-8 h-auto md:mt-8')};
+  ${tw('block w-2/5 md:w-1/2 ml-auto mr-auto lg:w-3/5 xl:w-1/2 lg:mr-8 h-auto md:mt-8')};
 `;
 
 const IconContainer = styled.div`
@@ -53,6 +53,7 @@ const IconContainer = styled.div`
 
 const IconWrapper = styled.a`
   ${tw('pl-2 pr-2 lg:pl-0 lg:pr-4 text-center')};
+  color: transparent;
 `;
 
 const JobDesc = styled.p`
@@ -69,42 +70,46 @@ const Index = () => (
     <div id="stars" />
     <div id="stars2" />
     <div id="stars3" />
-    <Container>
-      <Content>
-        <AvatarContainer>
-          <Avatar src={avatar} alt="Marko Bradic" />
-        </AvatarContainer>
-        <Hero>
-          <BigTitle>
-            👋🏻 Hey, nice to meet you!
-            <br />
-            <br />
-            <span>
-              I'm <b>Marko Bradic</b>
-            </span>
-            <br />
-            <JobDesc>
-              Product Manager
-              <JobLink href="https://deloittedigital.de" target="_blank">
-                @DeloitteDigital
-              </JobLink>
-            </JobDesc>
-          </BigTitle>
-          <Subtitle>
-            Powered by creative ideas and driven by the technologies of tomorrow I design and develop products &
-            services that enrich people’s lives
-          </Subtitle>
-          <IconContainer>
-            <IconWrapper href="https://www.linkedin.com/in/markobradic/" target="_blank">
-              <FontAwesomeIcon icon={['fab', 'linkedin']} color="white" className="hover-blue" size="2x" />
-            </IconWrapper>
-            <IconWrapper href="https://www.xing.com/profile/Marko_Bradic/" target="_blank">
-              <FontAwesomeIcon icon={['fab', 'xing-square']} color="white" className="hover-blue" size="2x" />
-            </IconWrapper>
-          </IconContainer>
-        </Hero>
-      </Content>
-    </Container>
+    <Delay wait={50}>
+      <Container>
+        <Content>
+          <AvatarContainer>
+            <Avatar src={avatar} alt="Marko Bradic" />
+          </AvatarContainer>
+          <Hero>
+            <BigTitle>
+              👋🏻 Hey, nice to meet you!
+              <br />
+              <br />
+              <span>
+                I'm <b>Marko Bradic</b>
+              </span>
+              <br />
+              <JobDesc>
+                Product Manager
+                <JobLink href="https://deloittedigital.de" rel="noopener" target="_blank">
+                  @DeloitteDigital
+                </JobLink>
+              </JobDesc>
+            </BigTitle>
+            <Subtitle>
+              Powered by creative ideas and driven by the technologies of tomorrow I design and develop products &
+              services that enrich people’s lives
+            </Subtitle>
+            <IconContainer>
+              <IconWrapper href="https://www.linkedin.com/in/markobradic/" rel="noopener" target="_blank">
+                .
+                <FontAwesomeIcon icon={['fab', 'linkedin']} color="white" className="hover-blue" size="2x" />
+              </IconWrapper>
+              <IconWrapper href="https://www.xing.com/profile/Marko_Bradic/" rel="noopener" target="_blank">
+                .
+                <FontAwesomeIcon icon={['fab', 'xing-square']} color="white" className="hover-blue" size="2x" />
+              </IconWrapper>
+            </IconContainer>
+          </Hero>
+        </Content>
+      </Container>
+    </Delay>
   </React.Fragment>
 );
 
