@@ -12,7 +12,7 @@ import SEO from '../components/SEO';
 // import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
 // import { hidden } from '../styles/utils';
 // import { colors } from '../../tailwind';
-import avatar from '../images/avatar.webp';
+import avatar from '../images/avatar.png';
 import '../styles/global';
 
 library.add(fas, far, fab);
@@ -70,7 +70,7 @@ const Index = () => (
     <div id="stars" />
     <div id="stars2" />
     <div id="stars3" />
-    <Delay wait={50}>
+    <Delay wait={25}>
       <Container>
         <Content>
           <AvatarContainer>
